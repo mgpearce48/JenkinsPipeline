@@ -5,6 +5,9 @@ pipeline {
          agent {
             label 'agent'
          }
+         tools {
+            nodejs '18.5.0'
+         }
          steps {
             sh 'java -version'
             echo 'Get working directory'
