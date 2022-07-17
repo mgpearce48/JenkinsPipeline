@@ -13,9 +13,6 @@ pipeline {
             }
             steps {
                 sh 'gradle --version'
-                sh 'whoami'
-                sh 'pwd'
-                sh 'ls -la'
             }
         }
     }
