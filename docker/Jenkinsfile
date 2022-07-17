@@ -1,34 +1,13 @@
 pipeline {
-   agent none
+   agent {
+      label 'agent'
+   }
    stages {
       stage('Hello') {
-         agent {
-            label 'agent'
-         }
-         tools {
-            nodejs '18.5.0'
-         }
          steps {
             sh 'java -version'
             echo 'Get working directory'
             sh 'pwd'
-            sh 'node --version'
-         }
-      }
-      stage('Next') {
-         agent {
-            docker {
-               image 'node:lts-buster-slim'
-            }
-         }
-         steps {
-            sh 'node --version'
-         }
-      }
-      stage('Last') {
-         agent any
-         steps {
-            sh 'docker ps -a'
          }
       }
    }
