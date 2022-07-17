@@ -13,8 +13,9 @@ pipeline {
             }
             steps {
                 sh 'gradle --version'
-                sh 'docker ps -a'
-                sh 'docker images'
+                sh 'whoami'
+                sh 'pwd'
+                sh 'ls -la'
             }
         }
     }
