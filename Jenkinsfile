@@ -5,7 +5,7 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
-            docker('docker') { }
+            Docker('docker-latest') { sh 'docker --version' }
             sh 'java -version'
             echo 'Get working directory'
             sh 'pwd'
