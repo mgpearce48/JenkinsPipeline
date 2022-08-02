@@ -5,7 +5,7 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
-            docker('docker-latest') {
+            docker('docker') {
                sh 'docker --version'
             }
             sh 'java -version'
