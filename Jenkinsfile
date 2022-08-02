@@ -17,6 +17,7 @@ pipeline {
          }
          steps {
             echo 'Here is more...'
+            sh 'docker compose version'
          }
       }
    }
