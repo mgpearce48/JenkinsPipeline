@@ -1,13 +1,22 @@
 pipeline {
-   agent {
-      label 'agent'
-   }
+   agent none
    stages {
       stage('Hello') {
+         agent {
+            label 'agent'
+         }
          steps {
             sh 'java -version'
             echo 'Get working directory'
             sh 'pwd'
+         }
+      }
+      stage('More') {
+         agent {
+            label 'my-agent'
+         }
+         steps {
+            echo 'Here is more...'
          }
       }
    }
