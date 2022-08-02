@@ -3,8 +3,7 @@ pipeline {
       label 'agent'
    }
    tools {
-     docker 'latest'
-    }      
+      docker 'latest'
    }
    stages {
       stage('Hello') {
