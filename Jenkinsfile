@@ -11,6 +11,7 @@ pipeline {
             sh 'java -version'
             echo 'Get working directory'
             sh 'pwd'
+            sh 'docker --version'
          }
       }
    }
